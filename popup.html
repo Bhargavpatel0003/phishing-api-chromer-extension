@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phishing Detection</title>
+    <link rel="stylesheet" href="./popup/popup.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-container">
+        <div class="header-logo">
+          <img src="./icons/phishing.png" alt="Phishing Detector Logo" />
+        </div>
+        <div class="header-text-div">
+          <h1 class="header-text">Phishing Detector</h1>
+        </div>
+        <div class="header-description">
+          Scan the current website to detect potential phishing threats. Stay
+          safe while browsing with real-time URL analysis
+          <div style="font-weight: 700;">Wait for 1 minute to get the results</div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="btn-container">
+        <button class="scan-me-btn" id="scan-me-btn">
+          <div class="spinner"></div>
+          <span> Scan URL </span>
+        </button>
+      </div>
+      <div class="result-container d-none">
+        <div class="top-section">
+          <div class="backbtn">
+            <button id="back-btn">
+              <span>&larr;</span>
+            </button>
+          </div>
+          <div class="topLogo">
+            <img src="./icons//phishing.png" alt="" />
+          </div>
+          <div class="topHeading">Results</div>
+        </div>
+        <div class="phishTitle">
+          <div class="p-title" id="p-title">Phishing</div>
+          <div class="p-logo">
+            <img id="p-logo" src="./icons/phishing.png" alt="" />
+          </div>
+        </div>
+        <div class="insight-container">
+          <div class="insight-title">Click to get insights</div>
+          <div class="insight-btn-container">
+            <p class="d-none" id="i-url"></p>
+            <button id="insights-btn" class="scan-me-btn">Insights</button>
+          </div>
+        </div>
+        <div class="ss-container">
+          <div class="ss-title">Click to get screenshot</div>
+          <div class="ss-btn-container">
+            <p class="d-none" id="ss-url"></p>
+            <button id="ss-btn" class="scan-me-btn btn-skyblue">
+              Screenshot
+            </button>
+          </div>
+        </div>
+        <div class="cat-container" id="cat-container">
+          <div class="cat-title">Category</div>
+          <div class="cat-btn-container">
+            <p id="cat-btn" disabled class="scan-me-btn btn-lightgreen">Cat</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

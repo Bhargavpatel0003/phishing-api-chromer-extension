@@ -1,0 +1,41 @@
+{
+    "manifest_version": 3,
+    "name": "Phishing Detection System",
+    "version": "1.0",
+    "description": "Detect potential phishing URLs and warn users.",
+    "permissions": [
+      "activeTab", 
+      "scripting", 
+      "tabs", 
+      "storage",
+      "notifications",
+      "downloads"
+    ],
+    "host_permissions": [
+      "https://*/*", 
+      "http://*/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/phishing.png",
+        "48": "icons/phishing.png",
+        "128": "icons/phishing.png"
+      }
+    },
+    "icons": {
+     "16": "icons/phishing.png",
+     "48": "icons/phishing.png",
+     "128": "icons/phishing.png"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["icons/*"],
+        "matches" : ["https://*/*", "http://*/*"]
+      }
+    ]
+  }
+  
